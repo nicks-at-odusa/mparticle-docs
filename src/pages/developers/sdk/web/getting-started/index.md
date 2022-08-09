@@ -109,7 +109,7 @@ There are several events that trigger SDK batch creation and upload:
 - `mParticle.upload()` is manually invoked
 - A user closes the window or closes/switches to another tab
 
-mParticle uses a modern web API, `sendBeacon` (see [MDN's documentation](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) for more) to upload batches. If a user closes the window or closes/switches tabs, `sendBeacon` is responsible for still sending a the batchesto mParticle's servers. To ensure maximum [browser compatibility](/developers/sdk/web/browser-compatibility/) and to capture every event, if `sendBeacon` is not available, the SDK will use `window.fetch` or `XHR`. `XHR` is used if `window.fetch` is unavailable. For `window.fetch` and `XHR` requests, events are sent to our servers as they are recorded.
+mParticle uses a modern web API, `sendBeacon` (see [MDN's documentation](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) for more) to upload batches. If a user closes the window or closes/switches tabs, `sendBeacon` is responsible for still sending a the batches to mParticle's servers. To ensure maximum [browser compatibility](/developers/sdk/web/browser-compatibility/) and to capture every event, if `sendBeacon` is not available, the SDK will use `window.fetch` or `XHR`. `XHR` is used if `window.fetch` is unavailable. For `window.fetch` and `XHR` requests, events are sent to our servers as they are recorded.
 
 ## SDK Configuration
 
